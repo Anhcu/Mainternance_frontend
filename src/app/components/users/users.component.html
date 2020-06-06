@@ -1,0 +1,319 @@
+<div class="table-wrapper">
+  <div class="table-title">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Manage Users </h1>
+      </div>
+      <div class="col-sm-6">
+        <a href="#addUserModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+          <span>Add New User</span></a>
+      </div>
+    </div>
+  </div>
+
+  <style type="text/css">
+    .no-sort::after {
+      display: none !important;
+    }
+
+    .no-sort {
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+  </style>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover" id="dataTable" cellspacing="0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th class="no-sort">Photo</th>
+          <th>Username</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Location</th>
+          <th>Field</th>
+          <th>Competences</th>
+          <th class="no-sort">Actions</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>ID</th>
+          <th>Photo</th>
+          <th>Username</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Location</th>
+          <th>Field</th>
+          <th>Competences</th>
+          <th>Actions</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><img src="https://toplist.vn/images/800px/yeu-media-yeumediavn-255063.jpg" width="75" height="50"
+              class="img-fluid img-thumbnail" alt="">
+          </td>
+          <td>johndrew@mail.com</td>
+          <td>Tiger Nixon</td>
+          <td>Planner</td>
+          <td>Salerno - Headquarters</td>
+          <td>Maintenance Manager</td>
+          <td>PAV Certification</td>
+          <td>
+
+            <a href="#editUserModal" class="edit" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+            <a href="#deleteUserModal" class="delete" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><img
+              src="https://dep365.com/wp-content/uploads/2017/11/lam-hotgirl-anh-khong-kho-voi-5-meo-chup-hinh-nay-2.jpg"
+              width="75" height="50" class="img-fluid img-thumbnail" alt=""></td>
+          <td>thomashardy@mail.com</td>
+          <td>Garrett Winters</td>
+          <td>Maintainer</td>
+          <td>Fisciano Factory</td>
+          <td>Electric - Electronics</td>
+          <td>Electrical Maintenance
+          </td>
+          <td>
+            <a href="#editUserModal" class="edit" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+            <a href="#deleteUserModal" class="delete" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td> <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFZ75LXibopQwwRd_AYWvtdh1SYLc6qhH36NumKVaoF1EcD2x-&usqp=CAU"
+              width="75" height="50" class="img-fluid img-thumbnail" alt="">
+          </td>
+          <td>sanghardy@mail.com</td>
+          <td>Ashton Cox</td>
+          <td>Maintainer</td>
+          <td>Baronissi</td>
+          <td>Hydraulics</td>
+          <td>Fluid mechanics</td>
+
+          <td>
+            <a href="#editUserModal" class="edit" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+            <a href="#deleteUserModal" class="delete" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td> <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTooAYL2yEGRe9DWIL1jfCq_8eo6Y__n41UBsm6mbQW-J-jHHtt&usqp=CAU"
+              width="75" height="50" class="img-fluid img-thumbnail" alt="">
+          </td>
+          <td>trungnguy@mail.com</td>
+          <td>Thom Cox</td>
+          <td>Planner</td>
+          <td>Salerno</td>
+          <td>Hydraulics</td>
+          <td>Paiting Factory</td>
+
+          <td>
+            <a href="#editUserModal" class="edit" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+            <a href="#deleteUserModal" class="delete" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td> <img
+              src="data:image/jpeg;base64,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"
+              width="75" height="50" class="img-fluid img-thumbnail" alt="">
+          </td>
+          <td>thaotran@mail.com</td>
+          <td>Thao Phuong</td>
+          <td>Maintainer</td>
+          <td>Rome</td>
+          <td>Hydraulics</td>
+          <td>Knowledge of cable types</td>
+
+          <td>
+            <a href="#editUserModal" class="edit" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+            <a href="#deleteUserModal" class="delete" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Edit Modal HTML -->
+<div id="addUserModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h4 class="modal-title">Add User</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Upload Photo</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+
+          <div class="form-group">
+            <label>Username:</label>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="">
+              <div class="input-group-postpend">
+                <span class="input-group-text">@company.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password:</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <div class="form-group">
+            <label>Full Name:</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <label>Role:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+              checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Maintaner
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Planner
+            </label>
+          </div>
+          <div class="form-group">
+            <label>Fields:</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Location:</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Competences:</label>
+            <textarea class="form-control" required></textarea>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+          <input type="submit" class="btn btn-success" value="Add">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Edit Modal HTML -->
+<div id="editUserModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h4 class="modal-title">Edit User</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <img src="https://toplist.vn/images/800px/yeu-media-yeumediavn-255063.jpg" width="75" height="50"
+              class="img-fluid img-thumbnail" alt="">
+            <!-- <label for="exampleFormControlFile1">Upload Photo</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1"> -->
+          </div>
+          <div class="form-group">
+            <label>Username:</label>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="" value="johndrew@mail.com">
+              <div class="input-group-postpend">
+                <span class="input-group-text">@company.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password:</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" value="homework">
+          </div>
+
+          <div class="form-group">
+            <label>Full Name:</label>
+            <input type="text" class="form-control" required value="Tiger Nixon">
+          </div>
+
+          <label>Role:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+              checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Maintaner
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Planner
+            </label>
+          </div>
+          <div class="form-group">
+            <label>Fields:</label>
+            <input type="text" class="form-control" required value ="Maintenance Manager">
+          </div>
+          <div class="form-group">
+            <label>Location:</label>
+            <input type="text" class="form-control" required value="Salerno - Headquarters">
+          </div>
+          <div class="form-group">
+            <label>Competences:</label>
+            <textarea class="form-control">PAV Certification</textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+          <input type="submit" class="btn btn-success" value="Update">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Delete Modal HTML -->
+<div id="deleteUserModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h4 class="modal-title">Delete User</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete this User?</p>
+          <p class="text-warning"><small>This action cannot be undone.</small></p>
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+          <input type="submit" class="btn btn-danger" value="Delete">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
